@@ -1,1 +1,1 @@
-Sitemap: https://cdc.poc.gov/sitemap.xml
+Sitemap: http://cdcgov.github.io/SimpleReport_Public_Site/sitemap.xml
