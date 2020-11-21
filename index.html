@@ -48,6 +48,7 @@
 
 
     
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
   </head>
   <body class="  ">
 
@@ -116,9 +117,11 @@
           href="/SimpleReport_Public_Site/"
           title="Home">
           
-          <em class="usa-logo__text">
-            SimpleReport
-          </em>
+            <img
+              class="usa-logo-img"
+              src="/SimpleReport_Public_Site/assets/img/SimpleReportLogo.svg"
+              alt="SimpleReport">
+          
         </a>
       </div>
       <button class="usa-menu-btn">Menu</button>
@@ -156,7 +159,7 @@
               
                 <li class="usa-nav__secondary-item">
                   <a href="https://prime-eval.okta.com/oauth2/default/v1/authorize?client_id=0oa53ln2xltKTIOyF4h6&response_type=token&scope=openid&scope=pdi&redirect_uri=https://cdc.simplereport.org/dev/app"
-                   class="usa-button usa-button--outline text-no-underline text-primary wide-button" >
+                   class="usa-button usa-button--accent-cool text-no-underline text-ink wide-button" >
                     Log in
                   </a>
                 </li>
@@ -180,22 +183,29 @@
     
 <section class="usa-hero" style="background-image: url(/SimpleReport_Public_Site)" aria-label="Introduction";>
   <div class="grid-container">
-    <div class="usa-hero__callout">
-      
+    <div class="grid-row">
+      <div class="grid-col usa-hero__callout">
+        
 
-      <p>SimpleReport is a free web-based tool that provides COVID-19 testing sites an easy way to record results for rapid point-of-care tests and quickly report data to public health departments. <br /><br /> SimpleReport is HIPAA-compliant and backed by the Centers for Disease Control (CDC).</p>
+        <h2>
+        SimpleReport is a free web-based tool that provides COVID-19 testing sites an easy way to record results for rapid point-of-care tests and quickly report data to public health departments. <br/> SimpleReport is HIPAA-compliant and backed by the Centers for Disease Control (CDC).
+        </h2>
 
-
-      
+        
+      </div>
     </div>
     
-      <div class="grid-row">
-        <div class="grid-col"></div>
-        <div class="grid-col usa-hero__placeholder"></div>
-      </div>
+      <img class="usa-hero-placeholder"
+        src="/SimpleReport_Public_Site/assets/img/HeroPlaceholder.svg"
+        alt="placeholder">
     
   </div>
 </section>
+
+<img class="usa-hero-vector"
+  src="/SimpleReport_Public_Site/assets/img/HeroVector.svg"
+  alt="hero-vector">
+
 
 
 
@@ -224,12 +234,12 @@
     <div class="grid-container">
         
         <div class="grid-row">
-            <h5>How it works</h3>
+            <h2>How it works</h2>
         </div>
         <div class="grid-row grid-gap grid-gap-small-btm">
             
             <div class="grid-col">
-                <h3>Testing sites</h2>
+                <h4>Testing sites</h4>
                 
                   <div class='usa-prose'>
                     <p>SimpleReport integrates with COVID-19 testing workflows to streamline data collection and reporting. Smart data entry features let you skip repetitive tasks and get through the testing process faster, while reducing manual data entry errors.</p>
@@ -253,7 +263,7 @@
             </div>
             
             <div class="grid-col">
-                <h3>Public health departments</h2>
+                <h4>Public health departments</h4>
                 
                   <div class='usa-prose'>
                     <p>During the COVID-19 pandemic, every moment counts. With SimpleReport, receive consistent, HIPAA-compliant COVID-19 reports from testing sites in real time, customized to meet your reporting requirements. Get results from every testing site using SimpleReport in exactly the same way — eliminating inconsistencies and manual fixes.</p>
@@ -269,12 +279,12 @@
         </div>
         
         <div class="grid-row">
-            <h5>Who should use SimpleReport?</h3>
+            <h2>Who should use SimpleReport?</h2>
         </div>
         <div class="grid-row grid-gap grid-gap-small-btm">
             
             <div class="grid-col">
-                <h3>COVID-19 testing sites</h2>
+                <h4>COVID-19 testing sites</h4>
                 
                   <div class='usa-prose'>
                     <p>Any location providing rapid COVID-19 testing (Quidel Sofia 2, BD Veritor, Abbott BinaxNow cards, Abbott ID Now, LumiraDX), including:</p>
@@ -304,7 +314,7 @@
             </div>
             
             <div class="grid-col">
-                <h3>Public health departments</h2>
+                <h4>Public health departments</h4>
                 
                   <div class='usa-prose'>
                     <p>Any public health department in the United States can use SimpleReport. SimpleReport is built to scale up and can connect you to thousands of testing sites, ensuring you get results through one tool, in the format that’s easiest for you.</p>
