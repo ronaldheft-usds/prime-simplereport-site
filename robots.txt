@@ -1,1 +1,1 @@
-Sitemap: http://cdcgov.github.io/SimpleReport_Public_Site/sitemap.xml
+Sitemap: http://localhost:4000/SimpleReport_Public_Site/sitemap.xml
