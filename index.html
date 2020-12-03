@@ -43,7 +43,7 @@
 
 
 <link rel="stylesheet"
-  href="/SimpleReport_Public_Site/assets/uswds/css/styles.css?1606941265223195861"
+  href="/SimpleReport_Public_Site/assets/uswds/css/styles.css?1607022960392451969"
   media="screen">
 
 
@@ -61,7 +61,7 @@
 
     <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
-    
+    <!-- 
 
 
   <section class="usa-banner" aria-label="Official government website">
@@ -118,8 +118,6 @@
       
   <div class="usa-overlay"></div>
 
-  <header class="usa-header usa-header--extended" role="banner">
-
 
   
     <div class="usa-navbar">
@@ -128,11 +126,9 @@
           href="/SimpleReport_Public_Site/"
           title="Home">
           
-            <img
-              class="usa-logo-img"
-              src="/SimpleReport_Public_Site/assets/img/SimpleReport.svg"
-              alt="SimpleReport">
-            <h1 class='usa-sr-only'>SimpleReport</h1>
+          <em class="usa-logo__text">
+            SimpleReport
+          </em>
           
         </a>
       </div>
@@ -148,36 +144,10 @@
         
         
         
-        <ul class="usa-nav__primary usa-accordion">
-          
-          <li class="usa-nav__primary-item">
-            
-              
-            
-          </li>
-          
-        </ul>
-        
 
         
 
         
-          
-          <div class="usa-nav__secondary">
-            <ul class="usa-unstyled-list usa-nav__secondary-links">
-              
-              
-                <li class="usa-nav__secondary-item">
-                  <a href="https://hhs-prime.okta.com/oauth2/default/v1/authorize?client_id=0oa5ahrdfSpxmNZO74h6&response_type=token&scope=openid&scope=simple_report&redirect_uri=https://simplereport.cdc.gov/app&nonce=thisisnotsafe&state=thisisbogus"
-                   class="usa-button usa-button--accent-cool text-no-underline text-ink wide-button" >
-                    Log in
-                  </a>
-                </li>
-              
-            </ul>
-            
-          </div>
-          
 
 
         </div>
@@ -190,16 +160,67 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
     
-    
-<section class="usa-hero" style="background-image: url(/SimpleReport_Public_Site)" aria-label="Introduction";>
+    <section class="usa-banner" aria-label="Official government website">
+  <div class="usa-accordion">
+    <header class="usa-banner__header">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img class="usa-banner__header-flag" src="/SimpleReport_Public_Site/assets/uswds/img/us_flag_small.png" alt="U.S. flag">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
+        </div>
+        <button class="usa-accordion__button usa-banner__button"
+          aria-expanded="false" aria-controls="gov-banner">
+          <span class="usa-banner__button-text">Here’s how you know</span>
+        </button>
+      </div>
+    </header>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/SimpleReport_Public_Site/assets/uswds/img/icon-dot-gov.svg" role="img" alt="Dot gov">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Official websites use .gov</strong>
+              <br/>
+              A <strong>.gov</strong> website belongs to an official government organization in the United States.
+            </p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <img class="usa-banner__icon usa-media-block__img" src="/SimpleReport_Public_Site/assets/uswds/img/icon-https.svg" role="img" alt="Https">
+          <div class="usa-media-block__body">
+            <p>
+              <strong>Secure .gov websites use HTTPS</strong>
+              <br/>
+              A <strong>lock</strong> (
+<span class="icon-lock"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-title banner-lock-description"><title id="banner-lock-title">Lock</title><desc id="banner-lock-description">A locked padlock</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/></svg></span>
+) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="usa-hero" aria-label="Introduction";>
+
+<!-- <section class="usa-hero" style="background-image: url(/SimpleReport_Public_Site)" aria-label="Introduction";> -->
   <div class="grid-container">
     <div class="grid-row">
       <div class="grid-col usa-hero__callout">
-        
-
+        <!--  -->
+        <a href="https://hhs-prime.okta.com/oauth2/default/v1/authorize?client_id=0oa5ahrdfSpxmNZO74h6&amp;response_type=token&amp;scope=openid&amp;scope=simple_report&amp;redirect_uri=https://simplereport.cdc.gov/app&amp;nonce=thisisnotsafe&amp;state=thisisbogus" class="usa-button usa-button--accent-cool text-no-underline text-ink wide-button">
+          Log in
+        </a>
+        <h1>SimpleReport</h1>
         <h2>
         A better way to report COVID-19 rapid tests
         </h2>
@@ -210,35 +231,35 @@
   </div>
 </section>
 
-<div class="grid-container usa-hero-placeholder-container">
-  <div class="grid-row">
-    <div class="grid-col usa-hero-subsection">
-      <p>
-        SimpleReport is a free tool that makes it easy for COVID-19 testing sites to  record results for rapid point-of-care tests and quickly report required data to public health departments.
-      </p>
-      <ul>
-        <li>
-          HIPAA-compliant
-        </li>
-        <li>
-          Developed in partnership with the CDC
-        </li>
-    </div>
-    <div class="grid-col hero-img-col">
-      <img class="usa-hero-placeholder"
-        src="/SimpleReport_Public_Site/assets/img/project-images/test-queue-horiz.png"
-        alt="simplereport displayed on a tablet">
+
+<section class="container-blue">
+
+  <div class="grid-container usa-hero-placeholder-container">
+    <div class="grid-row">
+      <div class="grid-col usa-hero-subsection">
+        <p>SimpleReport is a free tool that makes it easy for COVID-19 testing sites to record results for rapid point-of-care tests and quickly report required data to public health departments.</p>
+        <ul>
+          <li>
+            HIPAA-compliant
+          </li>
+          <li>
+            Developed in partnership with the CDC
+          </li>
+      </div>
+      <div class="grid-col hero-img-col">
+        <img class="usa-hero-placeholder"
+          src="/SimpleReport_Public_Site/assets/img/project-images/test-queue-horiz.png"
+          alt="simplereport displayed on a tablet">
+      </div>
     </div>
   </div>
-</div>
+
+</section>
 
 
-<img class="usa-hero-wave-top"
-  src="/SimpleReport_Public_Site/assets/img/wave-top.svg"
-  alt="">
-<img class="usa-hero-wave-bottom" src="/SimpleReport_Public_Site/assets/img/wave-bottom.svg" alt="">
-<div class="under-wave"></div>
 
+
+<!--  -->
 
 
 
@@ -492,6 +513,6 @@
 
 
 
-    <!-- 1b1d5c7 -->
+    <!-- deddd67 -->
   </body>
 </html>
