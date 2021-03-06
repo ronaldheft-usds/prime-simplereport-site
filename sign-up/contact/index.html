@@ -46,7 +46,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1614990661417272000"
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1614991952085899000"
   media="screen">
 
 
@@ -247,9 +247,26 @@
     class="usa-form usa-form--large"
     id="account-request-form"
     name="account-request">
-    <div class="card border-2px border-base-lighter bg-white radius-lg margin-top-2 padding-4 margin-bottom-4">
+    <div class="card border-2px border-base-lighter bg-white radius-lg margin-top-2 padding-4">
       <fieldset class="usa-fieldset">
-  <legend class="usa-legend usa-legend--large">Testing site information</legend>
+  <legend class="usa-legend usa-legend--large">Facility administrator</legend>
+  <p>The administrator is responsible for making sure that appropriate staff members get access to SimpleReport.</p>
+  <label class="usa-label" for="fa-first-name">First name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+  <input class="usa-input" id="fa-first-name" name="first-name" type="text" spellcheck="false" autocomplete="given-name" required>
+  <label class="usa-label" for="fa-last-name">Last name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+  <input class="usa-input" id="fa-last-name" name="last-name" type="text" spellcheck="false" autocomplete="family-name" required>
+  <label class="usa-label" for="fa-email">Email address <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+  <input class="usa-input" id="fa-email" name="email" type="email" autocapitalize="off" autocorrect="off" required>
+  <label class="usa-label" for="fa-work-phone-number">Work phone number <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+  <input class="usa-input" id="fa-work-phone-number" name="work-phone-number" type="tel" autocomplete="tel" required>
+  <label class="usa-label" for="fa-cell-phone-number">Cell phone number</label>
+  <input class="usa-input" id="fa-cell-phone-number" name="cell-phone-number" type="tel" autocomplete="tel">
+</fieldset>
+
+    </div>
+    <div class="card border-2px border-base-lighter bg-white radius-lg padding-4 margin-top-4">
+      <fieldset class="usa-fieldset">
+  <legend class="usa-legend usa-legend--large">Testing facility information</legend>
   <fieldset class="usa-fieldset">
     <label class="usa-label" for="mailing-address-1">
     Street address <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
@@ -422,7 +439,7 @@
     <input class="usa-input" id="county" name="county" type="text" spellcheck="false" required>
   </fieldset>
   <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend">Which type of testing facility are you?</legend>
+    <legend class="usa-legend">Which type of testing facility are you? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-radio">
       <input class="usa-radio__input" id="hospital-or-clinic" name="facility-type" type="radio" value="hospital-or-clinic">
       <label class="usa-radio__label" for="hospital-or-clinic">Hospital or clinic</label>
@@ -460,9 +477,9 @@
       <label class="usa-radio__label" for="primary-care-mental-health-outpatient">Primary Care / Mental Health outpatient</label>
     </div>
   </fieldset>
-  <label class="usa-label" for="organization-name">What’s the name of your organization? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
+  <label class="usa-label" for="organization-name">What’s the name of your organization?</label>
   <p class="usa-hint font-body-2xs">If you have only one testing facility, then your organization name and facility name will be the same.</p>
-  <input class="usa-input" id="organization-name" name="organization-name" type="text" spellcheck="false" required>
+  <input class="usa-input" id="organization-name" name="organization-name" type="text" spellcheck="false">
   <label class="usa-label" for="facility-name">What’s the name of your testing facility? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
   <p class="usa-hint font-body-2xs">We’ll report your data to the public health department using the name entered here. This name can’t be changed, so double-check that you’ve entered it correctly.</p>
   <p class="usa-hint font-body-2xs">If your organization has multiple testing facilities, submit a separate form for each one.</p>
@@ -470,7 +487,7 @@
   <label class="usa-label" for="clia-number">Clinical Laboratory Improvement Amendments (CLIA) number <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
   <input class="usa-input" id="clia-number" name="clia-number" type="text" required>
   <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend usa-legend">Which device(s) do you use for rapid COVID-19 testing?</legend>
+    <legend class="usa-legend usa-legend">Which device(s) do you use for rapid COVID-19 testing? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="abbott-binaxnow-cards" type="checkbox" name="testing-devices" value="abbott-binaxnow-cards">
       <label class="usa-checkbox__label" for="abbott-binaxnow-cards">Abbott BinaxNow cards</label>
@@ -501,7 +518,7 @@
     </div>
   </fieldset>
   <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend usa-legend">Which devices will you use to access SimpleReport?</legend>
+    <legend class="usa-legend usa-legend">Which devices will you use to access SimpleReport? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="laptop-computer" type="checkbox" name="access-devices" value="laptop-computer">
       <label class="usa-checkbox__label" for="laptop-computer">Laptop computer</label>
@@ -520,7 +537,7 @@
     </div>
   </fieldset>
   <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend usa-legend">Which web browsers do you use on those devices?</legend>
+    <legend class="usa-legend usa-legend">Which web browsers do you use on those devices? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="safari" type="checkbox" name="browsers" value="safari">
       <label class="usa-checkbox__label" for="safari">Safari</label>
@@ -539,9 +556,9 @@
     </div>
   </fieldset>
   <label class="usa-label" for="workflow">Briefly describe your testing workflow.</label>
-  <textarea class="usa-textarea height-10" id="workflow" name="workflow"></textarea>
+  <textarea class="usa-textarea" id="workflow" name="workflow"></textarea>
   <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend usa-legend">In your testing process, does the person who checks people in also record test results?</legend>
+    <legend class="usa-legend usa-legend">In your testing process, does the person who checks people in also record test results? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-radio">
       <input class="usa-radio__input" id="records-test-results-yes" type="radio" name="records-test-results" value="yes">
       <label class="usa-radio__label" for="records-test-results-yes">Yes</label>
@@ -552,7 +569,7 @@
     </div>
   </fieldset>
   <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend usa-legend">Approximately how long does the registration/check-in and testing process take for a single person?</legend>
+    <legend class="usa-legend usa-legend">Approximately how long does the registration/check-in and testing process take for a single person? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-radio">
       <input class="usa-radio__input" id="less-than-15-mins" type="radio" name="process-time" value="less-than-15-mins">
       <label class="usa-radio__label" for="less-than-15-mins">Less than 15 minutes</label>
@@ -575,7 +592,7 @@
     </div>
   </fieldset>
   <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend usa-legend">Approximately how much time do you spend every day submitting results to your public health department?</legend>
+    <legend class="usa-legend usa-legend">Approximately how much time do you spend every day submitting results to your public health department? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-radio">
       <input class="usa-radio__input" id="less-than-30-mins" type="radio" name="submitting-results-time" value="less-than-30-mins">
       <label class="usa-radio__label" for="less-than-30-mins">Less than 30 minutes</label>
@@ -596,7 +613,7 @@
 </fieldset>
 
     </div>
-    <div class="card border-2px border-base-lighter bg-white radius-lg margin-top-2 padding-4 margin-bottom-4">
+    <div class="card border-2px border-base-lighter bg-white radius-lg padding-4 margin-top-4">
       <fieldset class="usa-fieldset">
   <legend class="usa-legend usa-legend--large">Ordering provider</legend>
   <p>Some states (but not all) require information about your ordering provider. Please fill out the following information for the ordering provider at your test facility.</p>
@@ -782,23 +799,6 @@
 </fieldset>
 
     </div>
-    <div class="card border-2px border-base-lighter bg-white radius-lg margin-top-2 padding-4">
-      <fieldset class="usa-fieldset">
-  <legend class="usa-legend usa-legend--large">Facility administrator</legend>
-  <p>The administrator is responsible for making sure that appropriate staff members get access to SimpleReport.</p>
-  <label class="usa-label" for="fa-first-name">First name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
-  <input class="usa-input" id="fa-first-name" name="first-name" type="text" spellcheck="false" autocomplete="given-name" required>
-  <label class="usa-label" for="fa-last-name">Last name <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
-  <input class="usa-input" id="fa-last-name" name="last-name" type="text" spellcheck="false" autocomplete="family-name" required>
-  <label class="usa-label" for="fa-email">Email address <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
-  <input class="usa-input" id="fa-email" name="email" type="email" autocapitalize="off" autocorrect="off" required>
-  <label class="usa-label" for="fa-work-phone-number">Work phone number <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
-  <input class="usa-input" id="fa-work-phone-number" name="work-phone-number" type="tel" autocomplete="tel" required>
-  <label class="usa-label" for="fa-cell-phone-number">Cell phone number</label>
-  <input class="usa-input" id="fa-cell-phone-number" name="cell-phone-number" type="tel" autocomplete="tel">
-</fieldset>
-
-    </div>
     <button class="usa-button usa-button--big" type="submit" value="submit" name="submit">Submit</button>
   </form>
 </div>
@@ -886,6 +886,6 @@
 
 
 
-    <!-- 0f81010 -->
+    <!-- 646f432 -->
   </body>
 </html>
