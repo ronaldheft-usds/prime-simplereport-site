@@ -46,7 +46,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1614992213844113000"
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1614992816316113000"
   media="screen">
 
 
@@ -441,7 +441,7 @@
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend">Which type of testing facility are you? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="hospital-or-clinic" name="facility-type" type="radio" value="hospital-or-clinic">
+      <input class="usa-radio__input" id="hospital-or-clinic" name="facility-type" type="radio" value="hospital-or-clinic" required>
       <label class="usa-radio__label" for="hospital-or-clinic">Hospital or clinic</label>
     </div>
     <div class="usa-radio">
@@ -478,10 +478,10 @@
     </div>
   </fieldset>
   <label class="usa-label" for="organization-name">What’s the name of your organization?</label>
-  <p class="usa-hint font-body-2xs">If you have only one testing facility, then your organization name and facility name will be the same.</p>
+  <p class="usa-hint margin-top-1 font-body-2xs">If you have only one testing facility, then your organization name and facility name will be the same.</p>
   <input class="usa-input" id="organization-name" name="organization-name" type="text" spellcheck="false">
   <label class="usa-label" for="facility-name">What’s the name of your testing facility? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
-  <p class="usa-hint font-body-2xs">We’ll report your data to the public health department using the name entered here. This name can’t be changed, so double-check that you’ve entered it correctly.</p>
+  <p class="usa-hint margin-top-1 font-body-2xs">We’ll report your data to the public health department using the name entered here. This name can’t be changed, so double-check that you’ve entered it correctly.</p>
   <p class="usa-hint font-body-2xs">If your organization has multiple testing facilities, submit a separate form for each one.</p>
   <input class="usa-input" id="facility-name" name="facility-name" type="text" spellcheck="false" required>
   <label class="usa-label" for="clia-number">Clinical Laboratory Improvement Amendments (CLIA) number <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
@@ -489,7 +489,7 @@
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend usa-legend">Which device(s) do you use for rapid COVID-19 testing? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-checkbox">
-      <input class="usa-checkbox__input" id="abbott-binaxnow-cards" type="checkbox" name="testing-devices" value="abbott-binaxnow-cards">
+      <input class="usa-checkbox__input" id="abbott-binaxnow-cards" type="checkbox" name="testing-devices" value="abbott-binaxnow-cards" required>
       <label class="usa-checkbox__label" for="abbott-binaxnow-cards">Abbott BinaxNow cards</label>
     </div>
     <div class="usa-checkbox">
@@ -520,7 +520,7 @@
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend usa-legend">Which devices will you use to access SimpleReport? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-checkbox">
-      <input class="usa-checkbox__input" id="laptop-computer" type="checkbox" name="access-devices" value="laptop-computer">
+      <input class="usa-checkbox__input" id="laptop-computer" type="checkbox" name="access-devices" value="laptop-computer" required>
       <label class="usa-checkbox__label" for="laptop-computer">Laptop computer</label>
     </div>
     <div class="usa-checkbox">
@@ -539,7 +539,7 @@
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend usa-legend">Which web browsers do you use on those devices? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-checkbox">
-      <input class="usa-checkbox__input" id="safari" type="checkbox" name="browsers" value="safari">
+      <input class="usa-checkbox__input" id="safari" type="checkbox" name="browsers" value="safari" required>
       <label class="usa-checkbox__label" for="safari">Safari</label>
     </div>
     <div class="usa-checkbox">
@@ -560,7 +560,7 @@
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend usa-legend">In your testing process, does the person who checks people in also record test results? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="records-test-results-yes" type="radio" name="records-test-results" value="yes">
+      <input class="usa-radio__input" id="records-test-results-yes" type="radio" name="records-test-results" value="yes" required>
       <label class="usa-radio__label" for="records-test-results-yes">Yes</label>
     </div>
     <div class="usa-radio">
@@ -571,7 +571,7 @@
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend usa-legend">Approximately how long does the registration/check-in and testing process take for a single person? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="less-than-15-mins" type="radio" name="process-time" value="less-than-15-mins">
+      <input class="usa-radio__input" id="less-than-15-mins" type="radio" name="process-time" value="less-than-15-mins" required>
       <label class="usa-radio__label" for="less-than-15-mins">Less than 15 minutes</label>
     </div>
     <div class="usa-radio">
@@ -594,7 +594,7 @@
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend usa-legend">Approximately how much time do you spend every day submitting results to your public health department? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="less-than-30-mins" type="radio" name="submitting-results-time" value="less-than-30-mins">
+      <input class="usa-radio__input" id="less-than-30-mins" type="radio" name="submitting-results-time" value="less-than-30-mins" required>
       <label class="usa-radio__label" for="less-than-30-mins">Less than 30 minutes</label>
     </div>
     <div class="usa-radio">
@@ -886,6 +886,6 @@
 
 
 
-    <!-- bed773a -->
+    <!-- 931b61e -->
   </body>
 </html>
