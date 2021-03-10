@@ -46,7 +46,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1615228069250135000"
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1615418985629126000"
   media="screen">
 
 
@@ -342,7 +342,7 @@
     const data = {};
     fields.forEach(field => data[field] = document.getElementById(field).value);
 
-    let response = await fetch('/waitlist/submit', {
+    let response = await fetch('http://localhost:8080/account-request/waitlist', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -350,7 +350,11 @@
       body: JSON.stringify(data),
     });
 
-    let text = await response.text(); // read response body as text
+    if(response.ok) {
+      window.alert("Tada");
+    } else {
+      window.alert("It didn't work");
+    }
     // TODO: something with the response, IE put a success message on the page
   };
 </script>
@@ -437,6 +441,6 @@
 
 
 
-    <!-- f18430e -->
+    <!-- 3271067 -->
   </body>
 </html>
