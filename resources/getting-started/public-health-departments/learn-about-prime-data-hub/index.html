@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Using SimpleReport | SimpleReport</title>
+<title>Learn about the PRIME Data Hub | SimpleReport</title>
 
 
 
@@ -44,7 +44,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1615516646758278000"
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1615937078969358000"
   media="screen">
 
 
@@ -226,13 +226,15 @@
 
     
     
-    <div id='main-content'>
-      <div class="usa-section">
-  <div class="grid-container">
-    <div class="grid-row grid-gap flex-align-start">
-      
+    <div class="page-container" id='main-content'>
       
 
+<div class="usa-section">
+  <div class="grid-container">
+    
+    <div class="grid-row grid-gap flex-align-start">
+    
+      
         <div class="usa-layout-docs__sidenav desktop:grid-col-3">
           
             <a class='home-link display-block margin-bottom-2' href="/prime-simplereport-site/">
@@ -245,18 +247,9 @@
       
         
         <li class="usa-sidenav__item">
-          <a href="/prime-simplereport-site/resources/getting-started/"
-            >
-            Getting started
-          </a>
-        </li>
-        
-      
-        
-        <li class="usa-sidenav__item">
-          <a href="/prime-simplereport-site/resources/using-simplereport/"
+          <a href="/prime-simplereport-site/resources/getting-started/testing-facilities/onboard-your-organization/"
              class="usa-current" >
-            Using SimpleReport
+            Getting started
           </a>
         </li>
         
@@ -264,55 +257,30 @@
             
               
               <li class="usa-sidenav__item">
-                <a href="/prime-simplereport-site/resources/using-simplereport/select-your-testing-facility/"
+                <a href="/prime-simplereport-site/resources/getting-started/testing-facilities/onboard-your-organization/"
                   >
-                  Select your testing facility
+                  Testing facilities
                 </a>
                 
               </li>
             
               
               <li class="usa-sidenav__item">
-                <a href="/prime-simplereport-site/resources/using-simplereport/conduct-and-submit-tests/"
-                  >
-                  Conduct and submit tests
+                <a href="/prime-simplereport-site/resources/getting-started/public-health-departments/learn-about-prime-data-hub/"
+                   class="usa-current" >
+                  Public health departments
                 </a>
                 
-              </li>
-            
-              
-              <li class="usa-sidenav__item">
-                <a href="/prime-simplereport-site/resources/using-simplereport/manage-results/review-results/"
-                  >
-                  Manage results
-                </a>
-                
-              </li>
-            
-              
-              <li class="usa-sidenav__item">
-                <a href="/prime-simplereport-site/resources/using-simplereport/manage-people-you-test/add-a-new-person/"
-                  >
-                  Manage people you test
-                </a>
-                
-              </li>
-            
-              
-              <li class="usa-sidenav__item">
-                <a href="/prime-simplereport-site/resources/using-simplereport/manage-users/manage-user-permissions/"
-                  >
-                  Manage users
-                </a>
-                
-              </li>
-            
-              
-              <li class="usa-sidenav__item">
-                <a href="/prime-simplereport-site/resources/using-simplereport/manage-facility-info/add-a-facility/"
-                  >
-                  Manage facility info
-                </a>
+                  <ul class="usa-sidenav__sublist">
+                  
+                    <li class="usa-sidenav__item">
+                      <a href="/prime-simplereport-site/resources/getting-started/public-health-departments/learn-about-prime-data-hub/"
+                         class="usa-current" >
+                        Learn about PRIME Data Hub
+                      </a>
+                    </li>
+                  
+                  </ul>
                 
               </li>
             
@@ -321,7 +289,16 @@
       
         
         <li class="usa-sidenav__item">
-          <a href="/prime-simplereport-site/resources/troubleshooting/"
+          <a href="/prime-simplereport-site/resources/using-simplereport/select-your-testing-facility/"
+            >
+            Using SimpleReport
+          </a>
+        </li>
+        
+      
+        
+        <li class="usa-sidenav__item">
+          <a href="/prime-simplereport-site/resources/troubleshooting/reset-your-simplereport-password/"
             >
             Troubleshooting
           </a>
@@ -330,7 +307,7 @@
       
         
         <li class="usa-sidenav__item">
-          <a href="/prime-simplereport-site/resources/staying-connected/"
+          <a href="/prime-simplereport-site/resources/staying-connected/join-the-simplereport-google-group/"
             >
             Staying connected
           </a>
@@ -349,22 +326,35 @@
         
           <p class="text-medium text-uppercase text-ls-1 line-height-sans-2 text-base-dark font-heading-3xs">
             
-            resources
+            public health departments
           </p>
         
         
           <h1
             
              class="margin-top-1">
-            Using SimpleReport
+            Learn about the PRIME Data Hub
           </h1>
         
-        <p>Once you’ve set up SimpleReport, you can begin using it in your daily work.</p>
+        <p>Public health departments receive SimpleReport testing data via the PRIME Data Hub. The Data Hub is a free and open-sourced data platform that makes it easier for testing facilities to send their COVID-19 rapid test data to public health departments.
+<img src="/prime-simplereport-site/assets/img/resources/learn-about-prime-data-hub/data-hub-diagram.png" alt="Diagram showing how SimpleReport, lab, and hospitals all send data to the Data Hub, which then sends data to state and county public health departments" /></p>
 
-<p>Use the menu on the left to skip to a particular section, or start with <a href="/prime-simplereport-site/resources/using-simplereport/select-your-testing-facility/">selecting your testing facility</a>.</p>
+<p>There are three main reasons for public health departments to use the Data Hub:</p>
+<ul>
+  <li><strong>You’ll receive data from SimpleReport.</strong> If your jurisdiction wants to receive point-of-care tests results from SimpleReport, you’ll need to build an integration with the Data Hub.</li>
+  <li><strong>You’ll have to support fewer connections.</strong> The Data Hub’s model focuses on aggregating data from multiple sources and senders, which you’ll receive together in a single feed.</li>
+  <li><strong>You’ll get more complete, timely data.</strong> The Data Hub validates data from its senders and transfers it to you at your preferred frequency and in your preferred format.</li>
+</ul>
+
+<p>To let testing facilities in your jurisdiction send you data through SimpleReport, you need to connect to the Data Hub. Here’s a guide to walk you through the process:</p>
+<ul>
+  <li><a href="/prime-simplereport-site/assets/resources/Data_Hub_Onboarding_Guide.pdf">Data Hub State Integration Guide</a> (PDF)</li>
+</ul>
 
       </main>
+    
     </div>
+    
   </div>
 </div>
 
@@ -405,18 +395,18 @@
         
       </div>
       <div class="grid-row grid-gap-2">
-        <div class="tablet:grid-col-3">
+        <div class="tablet:flex-auto">
           <a href='/prime-simplereport-site/about-us/'>About us</a><br>
           <a href='/prime-simplereport-site/terms-of-service/'>Terms of service</a><br>
           <a href="#">Accessibility</a><br>
-          <a href='/prime-simplereport-site/resources/'>Get resources</a>
+          <a href='/prime-simplereport-site/resources/getting-started/testing-facilities/onboard-your-organization/'>Get resources</a>
         </div>
-        <div class="tablet:grid-col-4">
+        <div class="tablet:flex-auto tablet:padding-left-4">
           <a href="#">Freedom of Information Act (FOIA)</a><br>
           <a href="#">Office of the Inspector General</a><br>
           <a href="#">No FEAR Act Data</a>
         </div>
-        <div class="tablet:grid-col-4">
+        <div class="tablet:flex-auto tablet:padding-left-4">
             <a href="#">Privacy Policy</a><br>
             <a href="#">Digital Analytics Program (DAP)</a>
         </div>
@@ -451,6 +441,6 @@
 
 
 
-    <!-- d07af45 -->
+    <!-- c17816e -->
   </body>
 </html>
