@@ -6964,10 +6964,10 @@ use@^3.1.0:
   version "0.1.0"
   resolved "https://codeload.github.com/uswds/uswds-gulp/tar.gz/0896d3be9681541f200e45309d183fdae837d737"
 
-uswds@^2.10.1:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/uswds/-/uswds-2.10.1.tgz#544fcf9b3550b54c4b48071c9e8c51423c6ffd24"
-  integrity sha512-8HS6yjV8eoL3VE1nk++/VMEaSqXpJCG18SMKwCj2wrZGgtIFKMaYh2746SGxDcJzO5V6g4McEN1gL2eRLfy2GA==
+uswds@^2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/uswds/-/uswds-2.11.1.tgz#3061ca8d958d6cbcd1f08e1d760e2028c3d025df"
+  integrity sha512-yhLTik8AuiLdp+e7/v84unn1PF3f+qtYjcdsFRjy8+7TI2mTa4wk8/5oDaMJnk1LMA3tSQNkmxGetmOS1q4zXA==
   dependencies:
     classlist-polyfill "^1.0.3"
     del "^6.0.0"
