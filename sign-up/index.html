@@ -46,7 +46,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1620415029781299000">
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1621282244189034000">
 
 
     
@@ -960,7 +960,7 @@
           body: JSON.stringify(data),
         });
         if (response.ok) {
-          window.location.replace("/sign-up/thanks");
+          window.location.replace("/sign-up/thanks?email=" + encodeURIComponent(data.email));
         } else {
           throw "oh no";
         }
@@ -1010,9 +1010,6 @@
           <a href="https://www.cdc.gov/contact/accessibility.html"
             >Accessibility</a
           >
-        </li>
-        <li class="usa-identifier__required-links-item">
-          <a href="/prime-simplereport-site/resources/">Get resources</a>
         </li>
         <li class="usa-identifier__required-links-item">
           <a href="https://www.cdc.gov/od/foia">FOIA requests</a>
@@ -1082,6 +1079,6 @@
   }
 </script>
 
-    <!-- de16a31 -->
+    <!-- c48c928 -->
   </body>
 </html>
