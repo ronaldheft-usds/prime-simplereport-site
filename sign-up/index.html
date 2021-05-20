@@ -46,7 +46,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1621282244189034000">
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1621546410691410000">
 
 
     
@@ -505,9 +505,9 @@
   </fieldset>
   <label class="usa-label" for="other-facility-type">*Other facility</label>
   <input class="usa-input" id="other-facility-type" name="other-facility" type="text">
-  <label class="usa-label" for="organization-name">What’s the name of your organization?</label>
+  <label class="usa-label" for="organization-name">What’s the name of your organization?  <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
   <p class="usa-hint margin-top-1 font-body-2xs">If you have only one testing facility, then your organization name and facility name will be the same.</p>
-  <input class="usa-input" id="organization-name" name="organization-name" type="text" spellcheck="false">
+  <input class="usa-input" id="organization-name" name="organization-name" type="text" spellcheck="false" required>
   <label class="usa-label" for="facility-name">What’s the name of your testing facility? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
   <p class="usa-hint margin-top-1 font-body-2xs">We’ll report your data to the public health department using the name entered here. This name can’t be changed, so double-check that you’ve entered it correctly.</p>
   <p class="usa-hint font-body-2xs">If your organization has multiple testing facilities, submit a separate form for each one.</p>
@@ -519,11 +519,11 @@
     <span class="usa-error-message display-none" id="testing-devices-error-message">This field is required</span>
     <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="abbott-binaxnow-cards" type="checkbox" name="testing-devices" value="abbott-binaxnow-cards">
-      <label class="usa-checkbox__label" for="abbott-binaxnow-cards">Abbott BinaxNow cards</label>
+      <label class="usa-checkbox__label" for="abbott-binaxnow-cards">Abbott BinaxNow</label>
     </div>
     <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="abbott-id-now" type="checkbox" name="testing-devices" value="abbott-id-now">
-      <label class="usa-checkbox__label" for="abbott-id-now">Abbott ID Now</label>
+      <label class="usa-checkbox__label" for="abbott-id-now">Abbott IDNow</label>
     </div>
     <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="access-bio-carestart" type="checkbox" name="testing-devices" value="access-bio-carestart">
@@ -535,7 +535,7 @@
     </div>
     <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="cuetm" type="checkbox" name="testing-devices" value="cuetm">
-      <label class="usa-checkbox__label" for="cuetm">CueTM Covid-19 Test</label>
+      <label class="usa-checkbox__label" for="cuetm">Cue</label>
     </div>
     <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="lumiradx" type="checkbox" name="testing-devices" value="lumiradx">
@@ -551,36 +551,36 @@
     </div>
   </fieldset>
   <label class="usa-label" for="other-testing-device-type">*Other device</label>
-  <input class="usa-input" id="other-testing-device-type" name="other-device" type="text">
+  <input class="usa-input" id="other-testing-device-type" name="testing-device-other" type="text">
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend usa-legend">What’s the primary device you use for COVID-19 rapid testing? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
-    <span class="usa-error-message display-none" id="default-testing-devices-error-message">This field is required</span>
+    <span class="usa-error-message display-none" id="default-testing-device-error-message">This field is required</span>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="default-abbott-binaxnow-cards" type="radio" name="default-testing-devices" value="abbott-binaxnow-cards">
-      <label class="usa-radio__label" for="default-abbott-binaxnow-cards">Abbott BinaxNow cards</label>
+      <input class="usa-radio__input" id="default-abbott-binaxnow-cards" type="radio" name="default-testing-device" value="abbott-binaxnow-cards">
+      <label class="usa-radio__label" for="default-abbott-binaxnow-cards">Abbott BinaxNow</label>
     </div>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="default-abbott-id-now" type="radio" name="default-testing-devices" value="abbott-id-now">
-      <label class="usa-radio__label" for="default-abbott-id-now">Abbott ID Now</label>
+      <input class="usa-radio__input" id="default-abbott-id-now" type="radio" name="default-testing-device" value="abbott-id-now">
+      <label class="usa-radio__label" for="default-abbott-id-now">Abbott IDNow</label>
     </div>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="default-access-bio-carestart" type="radio" name="default-testing-devices" value="access-bio-carestart">
+      <input class="usa-radio__input" id="default-access-bio-carestart" type="radio" name="default-testing-device" value="access-bio-carestart">
       <label class="usa-radio__label" for="default-access-bio-carestart">Access Bio CareStart</label>
     </div>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="default-bd-veritor" type="radio" name="default-testing-devices" value="bd-veritor">
+      <input class="usa-radio__input" id="default-bd-veritor" type="radio" name="default-testing-device" value="bd-veritor">
       <label class="usa-radio__label" for="default-bd-veritor">BD Veritor</label>
     </div>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="default-cuetm" type="radio" name="default-testing-devices" value="cuetm">
-      <label class="usa-radio__label" for="default-cuetm">CueTM Covid-19 Test</label>
+      <input class="usa-radio__input" id="default-cuetm" type="radio" name="default-testing-device" value="cuetm">
+      <label class="usa-radio__label" for="default-cuetm">Cue</label>
     </div>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="default-lumiradx" type="radio" name="default-testing-devices" value="lumiradx">
+      <input class="usa-radio__input" id="default-lumiradx" type="radio" name="default-testing-device" value="lumiradx">
       <label class="usa-radio__label" for="default-lumiradx">LumiraDX</label>
     </div>
     <div class="usa-radio">
-      <input class="usa-radio__input" id="default-quidel-sofia-2" type="radio" name="default-testing-devices" value="quidel-sofia-2">
+      <input class="usa-radio__input" id="default-quidel-sofia-2" type="radio" name="default-testing-device" value="quidel-sofia-2">
       <label class="usa-radio__label" for="default-quidel-sofia-2">Quidel Sofia 2</label>
     </div>
   </fieldset>
@@ -844,7 +844,7 @@
       "organization-name",
       "facility-name",
       "clia-number",
-      "other-device",
+      "testing-device-other",
       "other-browser",
       "workflow",
       "op-first-name",
@@ -860,7 +860,7 @@
     ];
     const radioFields = [
       "facility-type",
-      "default-testing-devices",
+      "default-testing-device",
       "records-test-results",
       "process-time",
       "submitting-results-time",
@@ -1012,6 +1012,9 @@
           >
         </li>
         <li class="usa-identifier__required-links-item">
+          <a href="/prime-simplereport-site/resources/">Get resources</a>
+        </li>
+        <li class="usa-identifier__required-links-item">
           <a href="https://www.cdc.gov/od/foia">FOIA requests</a>
         </li>
         <li class="usa-identifier__required-links-item">
@@ -1040,45 +1043,41 @@
 
 
 
-    
-
-
-
-
-
+           
+<script
+  src="/prime-simplereport-site/assets/js/uswds.min.js"
   
-    
-      <script src="/prime-simplereport-site/assets/js/uswds.min.js" async></script>
-    
-
-  
-    
-
-
-
+  async
+></script>
+     
 <script type="text/javascript">
-//<![CDATA[
-      var usasearch_config = { siteHandle:"simplereport" };
+  //<![CDATA[
+  var usasearch_config = { siteHandle: "simplereport" };
 
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src = "//search.usa.gov/javascripts/remote.loader.js";
-      document.getElementsByTagName("head")[0].appendChild(script);
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "//search.usa.gov/javascripts/remote.loader.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
 
-//]]>
+  //]]>
 </script>
 
 
 <script>
   function checkIe() {
-      if (window.navigator.userAgent.match(/MSIE|Trident/) !== null) {
-      window.location.href = '/prime-simplereport-site/unsupported-browser/'
+    if (window.navigator.userAgent.match(/MSIE|Trident/) !== null) {
+      window.location.href = "/prime-simplereport-site/unsupported-browser/";
     } else {
-      window.location.href = decodeURI('https://hhs-prime.okta.com/oauth2/default/v1/authorize?client_id=0oa5ahrdfSpxmNZO74h6&redirect_uri=https://simplereport.gov/app&response_type=token+id_token&scope=openid%20simple_report%20simple_report_prod&nonce=thisisnotsafe&state=thisisbogus');
+      window.location.href = decodeURI("https://hhs-prime.okta.com/oauth2/default/v1/authorize?client_id=0oa5ahrdfSpxmNZO74h6&redirect_uri=https://simplereport.gov/app&response_type=token+id_token&scope=openid%20simple_report%20simple_report_prod&nonce=thisisnotsafe&state=thisisbogus");
     }
   }
 </script>
 
-    <!-- c48c928 -->
+<script
+  src="https://touchpoints.app.cloud.gov/touchpoints/ef15d5e3.js"
+  async
+></script>
+
+    <!-- b4a59cc -->
   </body>
 </html>
