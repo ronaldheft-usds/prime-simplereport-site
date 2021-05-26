@@ -46,7 +46,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1621889110255829000">
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1622054841720579000">
 
 
     
@@ -517,8 +517,8 @@
       <label class="usa-radio__label" for="other-facility">Other*</label>
     </div>
   </fieldset>
-  <label class="usa-label" for="other-facility-type">*Other facility</label>
-  <input class="usa-input" id="other-facility-type" name="other-facility" type="text">
+  <label class="usa-label" for="facility-type-other">*Other facility</label>
+  <input class="usa-input" id="facility-type-other" name="facility-type-other" type="text">
   <label class="usa-label" for="organization-name">What’s the name of your organization?  <abbr title="required" class="usa-hint usa-hint--required">*</abbr></label>
   <p class="usa-hint margin-top-1 font-body-2xs">If you have only one testing facility, then your organization name and facility name will be the same.</p>
   <input class="usa-input" id="organization-name" name="organization-name" type="text" spellcheck="false" required>
@@ -556,6 +556,10 @@
       <label class="usa-checkbox__label" for="lumiradx">LumiraDX</label>
     </div>
     <div class="usa-checkbox">
+      <input class="usa-checkbox__input" id="quidel-sofia" type="radio" name="testing-device" value="quidel-sofia">
+      <label class="usa-checkbox__label" for="quidel-sofia">Quidel Sofia</label>
+    </div>
+    <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="quidel-sofia-2" type="checkbox" name="testing-devices" value="quidel-sofia-2">
       <label class="usa-checkbox__label" for="quidel-sofia-2">Quidel Sofia 2</label>
     </div>
@@ -568,7 +572,7 @@
   <input class="usa-input" id="other-testing-device-type" name="testing-device-other" type="text">
   <fieldset class="usa-fieldset margin-top-3">
     <legend class="usa-legend usa-legend">What’s the primary device you use for COVID-19 rapid testing? <abbr title="required" class="usa-hint usa-hint--required">*</abbr></legend>
-    <span class="usa-error-message display-none" id="default-testing-device-error-message">This field is required</span>
+    <span class="usa-error-message display-none" id="default-testing-device-error-message">The primary device must appear in the list of devices selected above</span>
     <div class="usa-radio">
       <input class="usa-radio__input" id="default-abbott-binaxnow-cards" type="radio" name="default-testing-device" value="abbott-binaxnow-cards">
       <label class="usa-radio__label" for="default-abbott-binaxnow-cards">Abbott BinaxNow</label>
@@ -592,6 +596,10 @@
     <div class="usa-radio">
       <input class="usa-radio__input" id="default-lumiradx" type="radio" name="default-testing-device" value="lumiradx">
       <label class="usa-radio__label" for="default-lumiradx">LumiraDX</label>
+    </div>
+    <div class="usa-radio">
+      <input class="usa-radio__input" id="default-quidel-sofia" type="radio" name="default-testing-device" value="quidel-sofia">
+      <label class="usa-radio__label" for="default-quidel-sofia">Quidel Sofia</label>
     </div>
     <div class="usa-radio">
       <input class="usa-radio__input" id="default-quidel-sofia-2" type="radio" name="default-testing-device" value="quidel-sofia-2">
@@ -638,8 +646,8 @@
       <label class="usa-checkbox__label" for="other-browser">Other*</label>
     </div>
   </fieldset>
-  <label class="usa-label" for="other-browser-type">*Other browser</label>
-  <input class="usa-input" id="other-browser-type" name="other-browser" type="text">
+  <label class="usa-label" for="browsers-other">*Other browser</label>
+  <input class="usa-input" id="browsers-other" name="browsers-other" type="text">
   <label class="usa-label" for="workflow">Briefly describe your testing workflow.</label>
   <textarea class="usa-textarea" id="workflow" name="workflow"></textarea>
   <fieldset class="usa-fieldset margin-top-3">
@@ -854,12 +862,12 @@
       "zip",
       "county",
       "facility-phone-number",
-      "other-facility",
+      "facility-type-other",
       "organization-name",
       "facility-name",
       "clia-number",
       "testing-device-other",
-      "other-browser",
+      "browsers-other",
       "workflow",
       "op-first-name",
       "op-last-name",
@@ -872,21 +880,55 @@
       "op-zip",
       "op-county",
     ];
-    const radioFields = [
-      "facility-type",
-      "default-testing-device",
-      "records-test-results",
-      "process-time",
-      "submitting-results-time",
+
+    // This array should be ordered by the way that these appear on the form;
+    // this way the .scrollIntoView works as-expected
+    const fieldGroups = [
+      {
+        id: "facility-type",
+        type: "radio"
+      },
+      {
+        id: "testing-devices",
+        type: "checkbox"
+      },
+      {
+        id: "default-testing-device",
+        type: "radio"
+      },
+      {
+        id: "access-devices",
+        type: "checkbox"
+      },
+      {
+        id: "browsers",
+        type: "checkbox"
+      },
+      {
+        id: "records-test-results",
+        type: "radio"
+      },
+      {
+        id: "process-time",
+        type: "radio"
+      },
+      {
+        id: "submitting-results-time",
+        type: "radio"
+      },
     ];
-    const checkboxFields = ["browsers", "testing-devices", "access-devices"];
+
+    const radioFields = fieldGroups.filter(e => e.type === 'radio').map(e => e.id);
+    const checkboxFields = fieldGroups.filter(e => e.type === 'checkbox').map(e => e.id);
 
     // If a non-required checkbox or radio group is added, this will need to change
-    const requiredElementGroups = radioFields.concat(checkboxFields);
+    const requiredElementGroups = fieldGroups.map(e => e.id);
 
     // Get the button & form elements
     const button = document.getElementById("form-submit-button");
     const form = document.getElementById("account-request-form");
+
+    let firstErrorSeen;
 
     // Has submit ever been pressed?
     let submitted = false;
@@ -897,11 +939,15 @@
      */
     function groupsAreValid(data) {
       let valid = true;
+      firstErrorSeen = undefined;
       requiredElementGroups.forEach((field) => {
         const errorSpan = document.getElementById(`${field}-error-message`);
         if (!data[field]) {
-          groupError = false;
+          valid = false;
           errorSpan.className = "usa-error-message";
+          if(!firstErrorSeen) {
+            firstErrorSeen = errorSpan;
+          }
         } else {
           errorSpan.className = "usa-error-message display-none";
         }
@@ -950,6 +996,24 @@
     });
 
     /**
+     * Add default-adding behavior onto the device radio group
+     */
+     const defaultDeviceRadios = Array.from(document.getElementsByName("default-testing-device"));
+     defaultDeviceRadios.forEach(element => {
+        const existingChangeFn = element.onchange;
+        element.onchange = () => {
+         const selectedDefaultDeviceIdArray = defaultDeviceRadios
+           .filter((e) => e.checked)
+           .map((e) => e.value);
+          const selectedDefaultDeviceId = selectedDefaultDeviceIdArray && selectedDefaultDeviceIdArray.length ? selectedDefaultDeviceIdArray[0] : false;
+          if(selectedDefaultDeviceId) {
+            document.getElementById(selectedDefaultDeviceId).checked = true;
+          }
+          existingChangeFn();
+        }
+     });
+
+    /**
      * Aggregate the form data; validate the form; submit
      */
     button.onclick = async () => {
@@ -959,7 +1023,25 @@
       const formValid = form.reportValidity();
       const groupsValid = groupsAreValid(data);
 
-      if (!formValid || !groupsValid) {
+      // Additionally validate that the default device type has been selected
+      let defaultDeviceValid = true;
+      const selectedDefaultDeviceIdArray = defaultDeviceRadios
+        .filter((e) => e.checked)
+        .map((e) => e.value);
+      const selectedDefaultDeviceId = selectedDefaultDeviceIdArray && selectedDefaultDeviceIdArray.length ? selectedDefaultDeviceIdArray[0] : false;
+      if(selectedDefaultDeviceId && !document.getElementById(selectedDefaultDeviceId).checked) {
+        defaultDeviceValid = false;
+        const errorSpan = document.getElementById(`default-testing-device-error-message`);
+        errorSpan.className = "usa-error-message";
+        if(!firstErrorSeen) {
+          firstErrorSeen = errorSpan;
+        }
+      }
+
+      if (!formValid || !groupsValid || !defaultDeviceValid) {
+        if(firstErrorSeen) {
+          firstErrorSeen.scrollIntoView();
+        }
         return;
       }
 
@@ -1098,6 +1180,6 @@
   }
 </script>
 
-    <!-- 58f2219 -->
+    <!-- 61ee8e7 -->
   </body>
 </html>
