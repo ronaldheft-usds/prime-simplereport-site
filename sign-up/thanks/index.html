@@ -44,7 +44,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1622677570203700000">
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1623257148437161000">
 
 
     
@@ -312,8 +312,11 @@
       </h2>
       <p>
         The last step to get access to SimpleReport is
-        <a href="https://outlook.office365.com/owa/calendar/Helpdesk@HHSGOV.onmicrosoft.com/bookings/s/HOX7KgZruESJksIgC8qVxQ2">scheduling your identity verification</a>.
-        We’ve also sent the scheduling link and more details to <span id="email-address-display"></span>.
+        <a
+          href="https://outlook.office365.com/owa/calendar/Helpdesk@HHSGOV.onmicrosoft.com/bookings/s/HOX7KgZruESJksIgC8qVxQ2"
+          >scheduling your identity verification</a
+        >. We’ve also sent the scheduling link and more details to
+        <span id="email-address-display"></span>.
       </p>
       <p>
         Didn’t get the email? Check your spam folder then contact
@@ -326,7 +329,7 @@
         <p>
           <a
             class="display-flex flex-align-center line-height-sans-1"
-            href="/prime-simplereport-site/getting-started/testing-facilities/get-training/"
+            href="/prime-simplereport-site/getting-started/organizations-and-testing-facilities/get-training/"
           >
             <span>Watch training videos</span
             ><svg
@@ -365,10 +368,12 @@
 </div>
 
 <script>
-  (function setEmailAddressText () {
+  (function setEmailAddressText() {
     const params = new URLSearchParams(document.location.search);
     const emailAddress = params.get("email") || "the email address provided";
-    const emailAddressElement = document.getElementById("email-address-display");
+    const emailAddressElement = document.getElementById(
+      "email-address-display"
+    );
     emailAddressElement.innerText = emailAddress;
   })();
 </script>
@@ -483,6 +488,6 @@
   }
 </script>
 
-    <!-- 93f486b -->
+    <!-- 116537d -->
   </body>
 </html>
