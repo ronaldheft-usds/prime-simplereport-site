@@ -46,7 +46,7 @@
 
 
 <link rel="stylesheet"
-  href="/prime-simplereport-site/assets/uswds/css/styles.css?1623778970183761000">
+  href="/prime-simplereport-site/assets/uswds/css/styles.css?1623787635981076000">
 
 
     
@@ -389,10 +389,6 @@
     If you have only one location, then enter that name for both your
     organization and testing facility.
   </p>
-  <p class="usa-hint font-body-2xs tablet:display-none">
-    Organizations have multiple testing facilities or locations as part of their
-    network.
-  </p>
   <input
     class="usa-input"
     id="organization-name"
@@ -501,10 +497,6 @@
     List the name of just one testing facility here for now. If your
     organization has multiple testing facilities or locations you can add them
     after you create your account.
-  </p>
-  <p class="usa-hint font-body-2xs tablet:display-none">
-    Testing facilities include individual locations that are part of a bigger
-    organization.
   </p>
   <input
     class="usa-input"
@@ -1033,121 +1025,6 @@
       >
     </div>
   </fieldset>
-  <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend usa-legend">
-      Which devices will you use to access SimpleReport? <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
-    </legend>
-    <span
-      class="usa-error-message display-none"
-      id="access-devices-error-message"
-      >This field is required</span
-    >
-    <div class="usa-checkbox">
-      <input
-        class="usa-checkbox__input"
-        id="laptop-computer"
-        type="checkbox"
-        name="access-devices"
-        value="laptop-computer"
-      />
-      <label class="usa-checkbox__label" for="laptop-computer"
-        >Laptop computer</label
-      >
-    </div>
-    <div class="usa-checkbox">
-      <input
-        class="usa-checkbox__input"
-        id="desktop-computer"
-        type="checkbox"
-        name="access-devices"
-        value="desktop-computer"
-      />
-      <label class="usa-checkbox__label" for="desktop-computer"
-        >Desktop computer</label
-      >
-    </div>
-    <div class="usa-checkbox">
-      <input
-        class="usa-checkbox__input"
-        id="ipad-or-tablet"
-        type="checkbox"
-        name="access-devices"
-        value="ipad-or-tablet"
-      />
-      <label class="usa-checkbox__label" for="ipad-or-tablet"
-        >iPad or tablet</label
-      >
-    </div>
-    <div class="usa-checkbox">
-      <input
-        class="usa-checkbox__input"
-        id="smartphone"
-        type="checkbox"
-        name="access-devices"
-        value="smartphone"
-      />
-      <label class="usa-checkbox__label" for="smartphone">Smartphone</label>
-    </div>
-  </fieldset>
-  <fieldset class="usa-fieldset margin-top-3">
-    <legend class="usa-legend usa-legend">
-      Which web browsers do you use on those devices? <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
-    </legend>
-    <span class="usa-error-message display-none" id="browsers-error-message"
-      >This field is required</span
-    >
-    <div class="usa-checkbox">
-      <input
-        class="usa-checkbox__input"
-        id="chrome"
-        type="checkbox"
-        name="browsers"
-        value="chrome"
-      />
-      <label class="usa-checkbox__label" for="chrome">Chrome</label>
-    </div>
-    <div class="usa-checkbox">
-      <input
-        class="usa-checkbox__input"
-        id="firefox"
-        type="checkbox"
-        name="browsers"
-        value="firefox"
-      />
-      <label class="usa-checkbox__label" for="firefox">Firefox</label>
-    </div>
-    <div class="usa-checkbox">
-      <input
-        class="usa-checkbox__input"
-        id="safari"
-        type="checkbox"
-        name="browsers"
-        value="safari"
-      />
-      <label class="usa-checkbox__label" for="safari">Safari</label>
-    </div>
-    <div class="usa-checkbox">
-      <input
-        class="usa-checkbox__input"
-        id="other-browser"
-        type="checkbox"
-        name="browsers"
-        value="other-browser"
-      />
-      <label class="usa-checkbox__label" for="other-browser">Other*</label>
-    </div>
-  </fieldset>
-  <label class="usa-label" for="browsers-other">*Other browser</label>
-  <input
-    class="usa-input"
-    id="browsers-other"
-    name="browsers-other"
-    type="text"
-  />
-  <label class="usa-label" for="workflow"
-    >Briefly describe your testing workflow.</label
-  >
-  <textarea class="usa-textarea" id="workflow" name="workflow"></textarea>
 </div>
 
     </div>
@@ -1392,8 +1269,6 @@
       "facility-name",
       "clia-number",
       "testing-device-other",
-      "browsers-other",
-      "workflow",
       "op-first-name",
       "op-last-name",
       "npi",
@@ -1420,14 +1295,6 @@
       {
         id: "default-testing-device",
         type: "radio"
-      },
-      {
-        id: "access-devices",
-        type: "checkbox"
-      },
-      {
-        id: "browsers",
-        type: "checkbox"
       },
     ];
 
@@ -1552,7 +1419,7 @@
       });
     }
     state.onchange = setOrderingProviderIsRequired;
-    setOrderingProviderIsRequired(); // initialize! 
+    setOrderingProviderIsRequired(); // initialize!
 
     /**
      * Aggregate the form data; validate the form; submit
@@ -1721,6 +1588,6 @@
   }
 </script>
 
-    <!-- 86bec8b -->
+    <!-- 1f12329 -->
   </body>
 </html>
